@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>Login Page</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.0/animate.min.css">
+<link rel="stylesheet" type="text/css" href="https://muskanpanjwani.github.io/HomePage/main.css">
+<style type="text/css">
+	select:required:invalid 
+	{
+		color: gray;
+    }
+    option[value=""][disabled] 
+    {
+    	display: none;
+    }
+    option 
+    {
+    	color: black;
+    }
+</style>
+</head>
+
+<body>
+<div class="limiter">
+<div class="container-login100">
+<div class="wrap-login100">
+<div class="login100-pic js-tilt" data-tilt>
+<img src="https://muskanpanjwani.github.io/HomePage/image/img-01.png">
+</div>
+<form class="login100-form validate-form" action='loginAction.jsp' method='post'>
+<span class="login100-form-title">
+<b>
+Member Login
+</b>
+</span>
+
+<div class="wrap-input100 validate-input">
+<select required class="input100" type="text" name="ut" placeholder="UserType">
+	 <option value="" disabled selected>UserType</option>
+	 <option value="admin">Admin</option>
+	 <option value="faculty">Faculty</option>
+	 <option value="student">Student</option>
+</select>
+<span class="focus-input100"></span>
+<span class="symbol-input100">
+</span>
+</div>
+
+<div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+<input class="input100" type="text" name="email" placeholder="Email">
+<span class="focus-input100"></span>
+<span class="symbol-input100">
+<i class="fa fa-envelope" aria-hidden="true"></i>
+</span>
+</div>
+
+<div class="wrap-input100 validate-input" data-validate="Password is required">
+<input class="input100" type="password" id="myInput" name="pass" placeholder="Password">
+<input type="checkbox" onclick="myFunction()">    Show Password
+<span class="focus-input100"></span>
+<span class="symbol-input100">
+<i class="fa fa-lock" aria-hidden="true"></i>
+</span>
+</div>
+
+<div class="container-login100-form-btn">
+<button class="login100-form-btn">
+Login
+</button>
+</div>
+
+<div class="text-center p-t-12">
+<span class="txt1">
+Forgot
+</span>
+<a class="txt2" href="Error404.html">
+Username / Password?
+</a>
+</div>
+
+<div class="text-center p-t-136">
+</div>
+
+</form>
+</div>
+</div>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script >
+		$('.js-tilt').tilt({
+			scale: 1.1
+		})
+</script>
+<script>
+  function myFunction() {
+  var x = document.getElementById("myInput");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+</script>
+<script type="text/javascript">
+  
+(function ($) {
+    "use strict";
+    var input = $('.validate-input .input100');
+
+    $('.validate-form').on('submit',function(){
+        var check = true;
+
+        for(var i=0; i<input.length; i++) {
+            if(validate(input[i]) == false){
+                showValidate(input[i]);
+                check=false;
+            }
+        }
+
+        return check;
+    });
+
+
+    $('.validate-form .input100').each(function(){
+        $(this).focus(function(){
+           hideValidate(this);
+        });
+    });
+
+    function validate (input) {
+        if($(input).attr('type') == 'email' || $(input).attr('name') == 'email') {
+            if($(input).val().trim().match(/^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{1,5}|[0-9]{1,3})(\]?)$/) == null) {
+                return false;
+            }
+        }
+        else {
+            if($(input).val().trim() == ''){
+                return false;
+            }
+        }
+    }
+
+    function showValidate(input) {
+        var thisAlert = $(input).parent();
+
+        $(thisAlert).addClass('alert-validate');
+    }
+
+    function hideValidate(input) {
+        var thisAlert = $(input).parent();
+
+        $(thisAlert).removeClass('alert-validate');
+    }
+    
+    
+
+})(jQuery);
+</script>
+</html>

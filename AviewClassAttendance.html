@@ -1,0 +1,343 @@
+<html lang="en">
+<head>
+	<title>View Attendance</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords">
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="https://muskanpanjwani.github.io/HomePage/Style.css" rel="stylesheet" type="text/css" media="all" />
+	<link rel="stylesheet" href="https://muskanpanjwani.github.io/HomePage/styleheader.css">
+	<link href="http://getbootstrap.com/2.3.2/assets/css/bootstrap-responsive.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+</head>
+
+<style type="text/css">
+	.navbar-light .navbar-toggler{
+    color: #000000;
+    border-color: black;
+	}
+
+.dropdowns {
+  font-size: 10px;
+  line-height: 1.0;
+  color: #666666;
+  width: 10%;
+  background: #e6e6e6;
+  height: 35px;
+  border-radius: 5px;
+  padding: 0 30px 0 50px;
+}
+.dropdowns2 {
+  font-size: 10px;
+  line-height: 1.0;
+  color: #666666;
+  width: 25%;
+  background: #e6e6e6;
+  height: 35px;
+  border-radius: 5px;
+  padding: 0 30px 0 50px;
+}
+.dates
+{
+	font-size: 10px;
+  line-height: 1.0;
+  color: #666666;
+  width: 10%;
+  background: #e6e6e6;
+  height: 35px;
+  border-radius: 5px;
+  padding: 0 2px 0 2px;
+
+}
+.navbar-light .navbar-nav .nav-link 
+	{
+    color: rgba(255,255,255,0.9);
+    font-weight: bold;
+	}
+    option 
+    {
+    	color: black;
+    }
+</style>
+<style>
+.btn {
+	display: inline-block;
+  background: #4dbf1c;
+  padding: 0px 20px;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 48px;
+  border-radius: 0px;
+  outline: none !important;
+  box-shadow: none !important;
+  text-align: center;
+  border: 1px solid #4dbf1c;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 300ms linear 0s; 
+  float:right;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+  background: transparent;
+    color: white;
+}
+.button {
+	display: inline-block;
+  background: #4dbf1c;
+  padding: 0px 20px;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 48px;
+  border-radius: 0px;
+  outline: none !important;
+  box-shadow: none !important;
+  text-align: center;
+  border: 1px solid #4dbf1c;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 300ms linear 0s; 
+  float:right;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+
+/* Darker background on mouse-over */
+.button:hover {
+  background: transparent;
+    color: white;
+}
+</style>
+<body>
+<header>
+		<div class="main_menu">
+			<nav class="navbar navbar-expand-lg navbar-light">
+			<div class="container">
+
+			<a class="navbar-brand logo_h"><img src="https://muskanpanjwani.github.io/HomePage/image/img-01.png" height="42" width="42" alt=""></a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			</button>
+
+			<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+				<ul class="nav navbar-nav menu_nav ml-auto">
+					<li class="nav-item"><a class="nav-link" href="facultyHome.jsp">Home</a></li>
+					<li class="nav-item"><a class="nav-link" href="AboutUs.html">About</a></li>
+					<li class="nav-item"><a class="nav-link" href="Contactus.html">Contact</a></li>
+					<li class="nav-item submenu dropdown">
+						<a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Profile</a>
+						<ul class="dropdown-menu">
+						<li class="nav-item"><a class="nav-link" style="color: black;" href="Profile.jsp">your profile</a>
+						<li class="nav-item"><a class="nav-link" style="color: black;" href="index.html">Logout</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			</div>
+			</nav>
+		</div>
+	</header>
+	<div class="clearfix"></div>
+	<div class="inner_content agile_top_w3_grids">
+		<label for="Semester" style="font-style: italic;text-transform:uppercase;"><b>Semester : </b></label>
+		<select required name="Semester" class = "dropdowns" placeholder="Semester" id="Semester">
+			<option value="1"selected>1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+		</select>
+		<label for="Branch" style="font-style: italic;text-transform:uppercase;"><b>Branch : </b></label>
+		<select required name="Branch" class = "dropdowns2" placeholder="Branch" id="Branch">
+			<option value="CSE" selected>Computer Science Engineering</option>
+			<option value="ME">Mechanical Engineering</option>
+			<option value="CE">Civil Engineering</option>
+			<option value="IT">Information Technology</option>
+			<option value="EC">Electrical And Communication Engineering</option>
+			<option value="EE">Electrical Engineering</option>
+			<option value="EEE">Electrical And Electronics Engineering</option>
+		</select>
+		<label for="Subject" style="font-style: italic;text-transform:uppercase;"><b>Subject : </b></label>
+		<select required name="Subject" class="dropdowns" placeholder="Subject" id="Subjects"></select>
+		<label for="From_date" style="font-style: italic;text-transform: uppercase;"><b>From : </b></label>
+		<input type="date" class = "dates" name="From_date" id="From_date"> 
+		<label for="To_date" style="font-style: italic;text-transform: uppercase;"><b>To : </b></label>
+		<input type="date" class = "dates" name="To_date" id="To_date">
+		<br><br>
+		<div class="table-responsive">
+			<table class="table" style="background-color: white" id="AttendanceList">
+			</table>
+		</div>
+		<a href="javascript:printwindow()">
+		<button class="btn"><i class="fa fa-download"></i> Download as pdf</button>
+		</a>
+		<a href="javascript:download_table_as_csv('AttendanceList');">
+		<button class="button"><i class="fa fa-download"></i> Download as csv</button>
+		</a>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script>
+	document.getElementById('From_date').value = new Date().toISOString().substring(0, 10);
+	document.getElementById('To_date').value = new Date().toISOString().substring(0, 10);
+	</script>
+	<script type="text/javascript">
+		$branch = $('#Branch');
+		$semester = $('#Semester');
+		$Subjects = $('#Subjects');
+		$from = $("#From_date");
+		$to = $("#To_date");
+
+		$from.change(
+			function(){
+				$.ajax({
+					type: "GET",
+					url: "AviewClassAttendance1.jsp",
+					data: {Branch: $branch.val(), Semester: $semester.val(), Subject: $Subjects.val(), From: $from.val(), To: $to.val()},
+					success: function(res){
+						//alert(res);
+						$("#AttendanceList").html(res);
+					}
+				});
+			});
+		$to.change(
+			function(){
+				$.ajax({
+					type: "GET",
+					url: "AviewClassAttendance1.jsp",
+					data: {Branch: $branch.val(), Semester: $semester.val(), Subject: $Subjects.val(), From: $from.val(), To: $to.val()},
+					success: function(res){
+						//alert(res);
+						$("#AttendanceList").html(res);
+					}
+				});
+			});
+
+		$branch.change(
+			function(){
+				$.ajax({
+					type:"GET",
+					url:"AgetSubjects.jsp",
+					data: {Branch: $branch.val(), Semester: $semester.val()},
+					success:function(res){
+						//alert(res);
+						$("#Subjects").html(res);
+					}
+				});
+				$.ajax({
+					type: "GET",
+					url: "AviewClassAttendance1.jsp",
+					data: {Branch: $branch.val(), Semester: $semester.val(), Subject: $Subjects.val(), From: $from.val(), To: $to.val()},
+					success: function(res){
+						//alert(res);
+						$("#AttendanceList").html(res);
+					}
+				});
+			});
+		$semester.change(
+			function(){
+				$.ajax({
+					type:"GET",
+					url:"AgetSubjects.jsp",
+					data: {Branch: $branch.val(), Semester: $semester.val()},
+					success:function(res){
+						//alert(res);
+						$("#Subjects").html(res);
+					}
+				});
+				$.ajax({
+					type: "GET",
+					url: "AviewClassAttendance1.jsp",
+					data: {Branch: $branch.val(), Semester: $semester.val(), Subject: $Subjects.val(), From:$from.val(), To: $to.val()},
+					success: function(res){
+						//alert(res);
+						$("#AttendanceList").html(res);
+					}
+				});	
+			});
+		$Subjects.change(
+			function(){
+				$.ajax({
+					type: "GET",
+					url: "AviewClassAttendance1.jsp",
+					data: {Branch: $branch.val(), Semester: $semester.val(), Subject: $Subjects.val(), From:$from.val(), To: $to.val()},
+					success: function(res){
+						//alert(res);
+						$("#AttendanceList").html(res);
+					}
+				});	
+			});
+		
+		$.ajax({
+			type:"GET",
+			url:"AgetSubjects.jsp",
+			data: {Branch: $branch.val(), Semester: $semester.val()},
+			success:function(res){
+				//alert($Subjects.val());
+				$("#Subjects").html(res);
+			}
+		});
+		$.ajax({
+			type:"GET",
+			url:"AviewClassAttendance1.jsp",
+			data: {Branch: $branch.val(), Semester: $semester.val(), Subject: $Subjects.val(), From:$from.val(), To: $to.val()},
+			success:function(res){
+				//alert(res);
+				$("#AttendanceList").html(res);
+			}
+		});
+		
+	</script>
+</body>
+	<script type="text/javascript">
+  function printwindow() {
+  if (confirm("download Attendance ?")) 
+  {
+    window.print();
+  }
+}
+   </script>
+   <script type="text/javascript">
+  function download_table_as_csv(table_id) {
+    // Select rows from table_id
+    var rows = document.querySelectorAll('table#' + table_id + ' tr');
+    // Construct csv
+    var csv = [];
+    for (var i = 0; i < rows.length; i++) {
+        var row = [], cols = rows[i].querySelectorAll('td, th');
+        for (var j = 0; j < cols.length; j++) {
+            var data = cols[j].innerText.replace(/(\r\n|\n|\r)/gm, '').replace(/(\s\s)/gm, ' ')
+            data = data.replace(/"/g, '""');
+            row.push('"' + data + '"');
+        }
+        csv.push(row.join(','));
+    }
+    var csv_string = csv.join('\n');
+    var filename = 'kamb-' + new Date().toISOString().substring(0, 10) + '.csv';
+    var link = document.createElement('a');
+    link.style.display = 'none';
+    link.setAttribute('target', '_blank');
+    link.setAttribute('href', 'data:text/csv;charset=utf-8,' + encodeURIComponent(csv_string));
+    link.setAttribute('download', filename);
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+}</script>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Add Faculty</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script type="application/x-javascript">
+		addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); }
+	</script>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+	<link href="https://muskanpanjwani.github.io/HomePage/formpage.css" rel='stylesheet' type='text/css' media="all">
+	<link href="https://muskanpanjwani.github.io/HomePage/Style.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all" />
+	<link rel="stylesheet" href="https://muskanpanjwani.github.io/HomePage/styleheader.css">
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://muskanpanjwani.github.io/HomePage/main.css">
+	<link href="http://getbootstrap.com/2.3.2/assets/css/bootstrap-responsive.css" rel="stylesheet">
+
+	<style type="text/css">
+		.navbar-light .navbar-nav .nav-link {
+    color: rgba(255,255,255,0.9);
+}
+	</style>
+
+</head>
+
+<body>
+<header>
+		<div class="main_menu">
+			<nav class="navbar navbar-expand-lg navbar-light">
+			<div class="container">
+
+			<a class="navbar-brand logo_h"><img src="https://muskanpanjwani.github.io/HomePage/image/img-01.png" height="42" width="42" alt=""></a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			</button>
+
+			<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+				<ul class="nav navbar-nav menu_nav ml-auto">
+					<li class="nav-item"><a class="nav-link" href="adminHome.jsp">Home</a></li>
+					<li class="nav-item"><a class="nav-link" href="AboutUs.html">About</a></li>
+					<li class="nav-item"><a class="nav-link" href="Contactus.html">Contact</a></li>
+					<li class="nav-item submenu dropdown">
+						<a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Profile</a>
+						<ul class="dropdown-menu">
+						<li class="nav-item"><a class="nav-link" style="color: black;" href="Profile.jsp">your profile</a>
+						<li class="nav-item"><a class="nav-link" style="color: black;" href="index.html">Logout</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			</div>
+			</nav>
+		</div>
+</header>
+
+	<form method="post" action="addFaculty.jsp" style="height: 700px;">
+	<div class="icon-stu">
+	
+		<h2 class="student-w3l">Add Faculty</h2>
+		<div class="stude-user-wls">
+			<span class="fa fa-user" aria-hidden="true"></span>
+			<div class="clear"> </div>
+		</div>
+		<div class="row-col">
+			<div class="banner-agileits-btm">
+				<div>
+				<div class="wrap-input100 validate-input">
+			<input required class="input100" type="text" name="tname" placeholder="Enter Faculty Name">
+		</div>
+		<div class="wrap-input100 validate-input">
+			<input required class="input100" type="email" name="temail" placeholder="Enter Email">
+		</div>
+		<div class="wrap-input100 validate-input" style="display:flex; width: 100% ">
+			<select required class="input100" type="text" name="tdept" placeholder="Enter Department">
+				<option value="" disabled selected> Branch </option>
+				<option value="CSE">Computer Science Engineering</option>
+				<option value="ME">Mechanical Engineering</option>
+				<option value="CE">Civil Engineering</option>
+				<option value="IT">Information Technology</option>
+				<option value="EC">Electrical And Communication Engineering</option>
+				<option value="EE">Electrical Engineering</option>
+				<option value="EEE">Electrical And Electronics Engineering</option>
+			</select>
+			<input required class="input100" type="text" name="tno" placeholder="Enter Phone No.">
+		</div>
+
+		<div class="container-login100-form-btn">
+			<button type="submit" class="login100-form-btn">
+			Add Faculty
+			</button>
+		</div>
+					
+				</div>
+			</div>
+			</div>
+			</div>
+ 	</form>
+
+			<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+			 </body>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+</html>
